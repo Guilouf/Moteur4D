@@ -18,7 +18,7 @@ import java.util.Random;
 
 import javax.swing.ImageIcon;
 
-import org.jnativehook.NativeHookException;
+import org.jnativehook.NativeHookException; //permet d'écouter le clavier
 
 
 /*
@@ -36,44 +36,52 @@ public class Controleclavier extends Applet {
 	Image terre ;
 	Image mec ;
 	Image pas ;
-	
-	File img = new File("terre.jpg");//REPERTOIRE BIN!!!!
-	File img2 = new File("mec.jpg");
-	File img3 = new File("pas.jpg");
-	
+
+
+//    File filePath = new File("").getAbsolutePath();//path relatif?? //donne le mauvais chemin, car va chercher l'executable java.exe et non les sources..
+    // problème de variable path? marche pas non plus avec getabsolutefile()
+    String filePath  = Controleclavier.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+//    c'est moche, mais ca donne l'endoit ou est éxécuté la classe, au moins.
+
+	File img = new File(filePath.concat("terre.jpg"));//path relatif??
+	File img2 = new File(filePath.concat("mec.jpg"));// au final, les image avec les sources
+    File img3 = new File(filePath.concat("pas.jpg"));
+
+
+
 	
 	test4D test = new test4D(10) ;
-	//test.Lanceur();
+
+//	test.Lanceur();
+
 
 	public static void main(String[] args)  {
-		//Controleclavier claviertruc = new Controleclavier() ;
-		//claviertruc.init();
+//		Controleclavier claviertruc = new Controleclavier() ;
+//		claviertruc.init();
+		System.out.print("\nMain controle_clav");
 
 	}
 	
 	
 	public void init() {
-		
-		//test.Lanceur();
+
+//		test.Lanceur();
+        System.out.print("absolutepath: "+filePath);
 		try {
-			terre = ImageIO.read(img);
-			mec = ImageIO.read(img2);
+			terre = ImageIO.read(img);  //  FIXME: 12/12/2016 gros problème d'images..
+            mec = ImageIO.read(img2);
 			pas = ImageIO.read(img3);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		addKeyListener(new HandleKeyboard() );
-
+        System.out.print("\nInit controle_clav");
 			
 	}
 	
 	class HandleKeyboard extends KeyAdapter {
     	public void keyPressed(KeyEvent k) {
-    		
-    		
-    		
     		Graphics g = getGraphics();
     		kb = k.getKeyChar() ;
     		test.moovegroove(kb);
@@ -127,9 +135,9 @@ public class Controleclavier extends Applet {
 					break;					
 				}
 			
-				for (int i = 0 ; i < 4 ; i++ ) {
+				for (int i = 0 ; i < 4 ; i++ ) { // FIXME: 12/12/2016 c'est hardcodé
 					if ( i == dimA-1 || i == dimB-1 ) {
-						
+						// et alors quoi?
 					}
 					
 					else
@@ -185,12 +193,7 @@ public class Controleclavier extends Applet {
 				break;
 				
 				}
-				
-				
-				
-				
 			}
 		}
 	}
-
 }

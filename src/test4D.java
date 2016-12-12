@@ -17,7 +17,7 @@ public class test4D {
 	public int dim4 ;
 	
 	public int [] posi ;
-	public int[] vue ;
+	public int [] vue ;
 
 	
 	
@@ -25,8 +25,10 @@ public class test4D {
 	
 	//MAIN/////////////////////////////////////////////////////////
 	public static void main(String[] args) {
-		
-		
+		// jessaye de relancer le truc..
+		//this.Lanceur();
+//		test4D test = new test4D(10) ; //nouveau..
+        System.out.print("Main de test4D");
 	
 
 	}
@@ -34,6 +36,7 @@ public class test4D {
 	
 	public test4D Lanceur()  {
 		test4D testruc = new test4D(10) ;
+        System.out.print("\nLanceur de test4D");
 		
 		
 		return testruc ;
@@ -252,11 +255,14 @@ public class test4D {
 	
 	//MOUVEMENT
 	public void moovegroove(char key) {
+        /**
+         *
+         */
         //System.out.println("Key Pressed: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
 		System.out.println("\n") ;
 
         if (key == 'P')  {
-        	System.out.println("MERDE") ;
+        	System.out.println("MERDE") ; // FIXME: marche pas...
         }
         
         switch(key) {
