@@ -18,7 +18,7 @@ import java.util.Random;
 
 import javax.swing.ImageIcon;
 
-import org.jnativehook.NativeHookException; //permet d'écouter le clavier
+//import org.jnativehook.NativeHookException; //permet d'écouter le clavier
 
 
 /*
@@ -49,7 +49,7 @@ public class Controleclavier extends Applet {
 
 
 
-	
+	// par contre il trouve test4D sans pression...
 	test4D test = new test4D(10) ;
 
 //	test.Lanceur();

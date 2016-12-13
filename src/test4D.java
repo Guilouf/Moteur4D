@@ -284,7 +284,8 @@ public class test4D {
         case '6': setView(3,4) ;
         visuel(vue, posi) ;
         break;
-        
+
+        //Move in width, heigth
         case 'z' : 
         	modify(posi , 0);
         	if (posi[0] > 0 && posi[0] <= getTaille()-1 ) {
@@ -322,7 +323,8 @@ public class test4D {
         	System.out.println("\n") ;
         	visuel(vue, posi) ;
         	 break;
-        
+
+        //Move in 4th dim
         case 'a' :
         	modify(posi , 0);
         	if (posi[3] > 0 && posi[3] <= getTaille()-1 ) {
@@ -342,7 +344,8 @@ public class test4D {
         	System.out.println("\n") ;
         	visuel(vue, posi) ;
         	 break;
-        	 
+
+        // Change depth
         case 'r' :
         	modify(posi , 0);
         	if (posi[2] > 0 && posi[2] <= getTaille()-1 ) {
