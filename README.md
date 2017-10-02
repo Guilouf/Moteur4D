@@ -15,7 +15,7 @@ Both displayed in command line and graphic output
 
 ## Commands
 - Moving:
-    - `Z,S` for moving up or down (height)
+    - `z,s` for moving up or down (height)
     - `q,d` for moving in width, left to right
     - `r,f` for the 3rd dimension, e.g depth
     - `a,e` for the 4th dimension
@@ -27,5 +27,8 @@ Both displayed in command line and graphic output
     - 4: Width, Depth
     - 5: Width, 4th
     - 5: Depth, 4th (?)
-    
+
 ## Load and save
+
+# todo
+- [ ] Branch to another UI, leave applet
