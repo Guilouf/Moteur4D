@@ -10,10 +10,10 @@ Main class is Controleclavier
 > Reminder for intelliJ: Specify `project/compiler_output`, 
 > and/or inherit in `modules/Paths`. Don't erase the `.iml`
 
-#UI
+# UI
 Both displayed in command line and graphic output
 
-##Commands
+## Commands
 - Moving:
     - `Z,S` for moving up or down (height)
     - `q,d` for moving in width, left to right
@@ -28,4 +28,4 @@ Both displayed in command line and graphic output
     - 5: Width, 4th
     - 5: Depth, 4th (?)
     
-##Load and save
+## Load and save
